@@ -1,4 +1,4 @@
-import { Inject, Injectable } from "@nestjs/common";
+import { HttpException, Inject, Injectable } from "@nestjs/common";
 import { userRepository } from "./users.repository";
 import { usersDto } from "src/users/dto/users.dto";
 
@@ -10,8 +10,11 @@ export class usersService{
         private readonly userRepo: userRepository
     ){}
 
-    create(userDto: usersDto){
-        // Como se debe interactuar con la BD, usar el repositorio
+    async create(userDto: usersDto){
+        const posible_user = await this.userRepo.findOne({email: userDto.email});
+        if(posible_user)
+            throw new HttpException('Error al registrar este usuario: un usuario con el mismo correo electronico ya existe.', 400)
+
         return this.userRepo.create(userDto);
     }
 }

@@ -4,9 +4,7 @@ export class usersDto{
     @IsNotEmpty()
     @IsString()
     username: String;
-
-    @IsNotEmpty()
-    @IsString()
+    
     @IsEmail()
     email: String;
 

@@ -14,10 +14,14 @@ export class userRepository{
         private readonly configService: ConfigService
     ) {}
 
+    async findOne(to_find): Promise<boolean>{
+        return (await this.userModel.exists(to_find)) ? true : false;
+    }
+
     async create(userDto: usersDto): Promise<user>{
         // Hashear el password con Bcrypt. Leyendo el numero de pasadas del algoritmo desde el .env
         const n_hash = this.configService.get<string>('N_HASH');
-        userDto.password = await bcrypt.hash(userDto.password.toString(), n_hash ? n_hash : 8 );
+        userDto.password = await bcrypt.hash(userDto.password.toString(), n_hash ? parseInt(n_hash) : 8 );
         try{
             const new_user = await this.userModel.create(userDto);
             return new_user.save();
