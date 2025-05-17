@@ -15,7 +15,7 @@
                 <b>JWT_SECRET</b>: The secret of your JWT
             </li>
             <li>
-                <b>N_HASH</b>: The number of iterations that the Bcrypt hash algorithm is going to make for the user password
+                <b>N_HASH</b>: The number of iterations that the Bcrypt hash algorithm is going to make for the user password. By default 8 if not specified here.
             </li>
         </ul>
     </li>
