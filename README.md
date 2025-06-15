@@ -4,9 +4,9 @@
 <ul>
     <li>
         Install the dependencies
-        <code>
-            $ yarn
-        </code>     
+```bash
+        a
+```
     </li>
     <li>
         Set enviroment variables
