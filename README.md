@@ -1,17 +1,19 @@
 <h2>Nestjs simple login</h2>
 <p>Simple login using Nestjs, Bcrypt, Passport and JWT</p>
 <h3>Installation</h3>
-<ul>
-    <li>
-        Install the dependencies
+
+<li>Install all the dependencies</li>
+<br>
+
 ```bash
-        a
+$ yarn
 ```
-    </li>
-    <li>
-        Set enviroment variables
-    </li>
-</ul>
+
+<br>
+<li>
+    Set enviroment variables
+</li>
+
 <h3>Usage</h3>
 <p>You can make use of this api with any client made to interact with web APIs like Thunderclient, Postman, Curl, etc</p>
 <p>To register a user you should make a <b>POST</b> request to /users/register and provide a json with the userInfo data, which should contain its email, username and password (min 8 characters)</p>
