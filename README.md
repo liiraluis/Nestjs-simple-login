@@ -2,22 +2,14 @@
 <p>Simple login using Nestjs, Bcrypt, Passport and JWT</p>
 <h3>Installation</h3>
 <ul>
-    <li>Clone the repository</li>
-    <li>Open the project folder in Visual Studio Code</li>
-    <li>Open a terminal in the project inside VSCode</li>
-    <li>Execute the command <code>yarn install</code> to install all the dependencies</li>
-    <li>Create and configure your .env inside the root folder of the project, with the variables:
-        <ul>
-            <li>
-                <b>DB_URI</b>: The URI of the database in mongodb. Example: mongodb://127.0.0.1:your_port/database_name
-            </li>
-            <li>
-                <b>JWT_SECRET</b>: The secret of your JWT
-            </li>
-            <li>
-                <b>N_HASH</b>: The number of iterations that the Bcrypt hash algorithm is going to make for the user password. By default 8 if not specified here.
-            </li>
-        </ul>
+    <li>
+        Install the dependencies
+        <code>
+            $ yarn
+        </code>     
+    </li>
+    <li>
+        Set enviroment variables
     </li>
 </ul>
 <h3>Usage</h3>
