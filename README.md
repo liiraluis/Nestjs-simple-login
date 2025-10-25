@@ -2,7 +2,7 @@
 <p>Simple login using Nestjs, Bcrypt, Passport and JWT</p>
 <h3>Installation</h3>
 
-<li>Install all the dependencies</li>
+<li>Install all the dependencies.</li>
 <br>
 
 ```bash
